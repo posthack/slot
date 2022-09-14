@@ -76,5 +76,23 @@ const decreaseDays = () => {
   & > *:not(:last-child) {
     margin-right: 20px;
   }
+  button {
+    padding: 0 20px;
+    height: 48px;
+    background-color: #271f27;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 20%);
+    &:hover {
+      background-color: lighten(#271f27, 5%);
+    }
+    &:disabled {
+      filter: contrast(0.7);
+      cursor: not-allowed;
+    }
+  }
 }
 </style>
