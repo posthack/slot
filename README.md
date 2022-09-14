@@ -4,7 +4,7 @@
 
 ![Preview](docs/preview.png)
 
-## [Live demo](https://imatteru-slot.netlify.com)
+## [Live demo](https://imatteru-slots.netlify.app)
 
 <br><br>
 
