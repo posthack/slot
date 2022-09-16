@@ -1,16 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import SingleCalendar from "@/components/SingleCalendar.vue";
-import domtoimage from "dom-to-image-more";
-
-const generateImage = async () => {
-  const node = document.getElementById("render-area");
-  const dataUrl = await domtoimage.toPng(node);
-  const link = document.createElement("a");
-  link.download = "image.png";
-  link.href = dataUrl;
-  link.click();
-};
+import { generateImage } from "@/composables/images.js";
 
 const days = ref(1);
 const increaseDays = () => {

@@ -64,6 +64,10 @@ const handleTimestampClick = (id) => {
 const getCurrentDate = computed(() => {
   const date = new Date();
   date.setDate(date.getDate() + props.day);
+  // if its weekend, add 2 days
+  if (date.getDay() === 0 || date.getDay() === 6) {
+    date.setDate(date.getDate() + 2);
+  }
   const options = {
     weekday: "long",
     year: "numeric",
