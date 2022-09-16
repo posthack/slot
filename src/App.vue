@@ -4,6 +4,11 @@ import SingleCalendar from "@/components/SingleCalendar.vue";
 import { generateImage } from "@/composables/images.js";
 
 const days = ref(1);
+
+const handleGenerateClick = (divId, imageName) => {
+  generateImage(divId, imageName);
+};
+
 const increaseDays = () => {
   if (days.value < 3) {
     days.value++;
@@ -29,7 +34,9 @@ const decreaseDays = () => {
       <button @click.prevent="decreaseDays" :disabled="days === 1">
         Remove day
       </button>
-      <button @click.prevent="generateImage">Generate image</button>
+      <button @click.prevent="handleGenerateClick('render-area', 'slots.png')">
+        Generate image
+      </button>
     </div>
   </div>
 </template>

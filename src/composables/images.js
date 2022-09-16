@@ -1,10 +1,13 @@
 import domtoimage from "dom-to-image-more";
 
-export const generateImage = async () => {
-  const node = document.getElementById("render-area");
+export const generateImage = async (
+  divId = "render-area",
+  imageName = "image.png"
+) => {
+  const node = document.getElementById(divId);
   const dataUrl = await domtoimage.toPng(node);
   const link = document.createElement("a");
-  link.download = "image.png";
+  link.download = imageName;
   link.href = dataUrl;
   link.click();
 };
